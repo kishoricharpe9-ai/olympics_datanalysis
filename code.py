@@ -19,7 +19,7 @@ st.set_page_config(
 
 @st.cache_data
 def load_and_preprocess():
-    df = pd.read_csv('athlete_events.csv')
+    df = pd.read_csv('athlete_events.zip')
     region_df = pd.read_csv('noc_regions.csv')
     df = preprocessor.preprocess(df, region_df)
     return df
