@@ -1,53 +1,84 @@
-# 🏅 Olympic History Data Analysis Web App
+```
+# 🏅 120 Years of Olympic History: Data Analysis &amp; Web Dashboard
 
-An interactive Exploratory Data Analysis (EDA) dashboard built with **Python**, **Streamlit**, and **Plotly**. This application dives into 120 years of modern Olympic Games history (1896–2016), enabling users to explore medal tallies, historical participation trends, country-level performance, and athlete demographics.
+An interactive Exploratory Data Analysis (EDA) dashboard built with **Python, Streamlit, and Plotly**. This application explores 120 years of modern Olympic Games history (1896–2016), enabling users to analyze medal tallies, historical participation trends, country-level performance, and athlete demographics.
+
+🚀 **Live Interactive App**: [Launch Streamlit Dashboard](https://olympicsdatanalysis-hduhxmsnw8mrdukvfrrwse.streamlit.app/)  
+💻 **GitHub Repository**: [kishoricharpe9-ai/olympics_datanalysis](https://github.com/kishoricharpe9-ai/olympics_datanalysis)
 
 ---
 
 ## ✨ Key Features
 
-* **🥇 Medal Tally:** Filter dynamic medal tables by **Year** and **Country** (or view the all-time overall standings).
-* **📊 Overall Analysis:** View key high-level statistics (total editions, host cities, sports, events, participating nations, and athletes) alongside interactive trend lines over time.
-* **🌍 Country-Wise Analysis:** Deep dive into any specific nation's Olympic journey, medal progression across years, sport-wise heatmap, and top-performing athletes.
-* **🏃 Athlete-Wise Analysis:** Explore interactive age distributions for medalists across various sports, height-vs-weight scatter plots by gender and medal type, and male-vs-female participation trends over the years.
+* 🥇 **Medal Tally Analysis**: Filter dynamic medal tables by Year and Country (or view all-time standings).
+* 📊 **Overall Statistics &amp; Trends**: High-level metrics tracking the evolution of editions, host cities, sports, events, participating nations, and male-vs-female athlete ratios over time.
+* 🌍 **Country-Wise Deep Dive**: Analyze a specific nation's Olympic journey, medal progression across editions, sport-wise heatmaps, and top-performing athletes.
+* 🏃 **Athlete Demographics &amp; Profiling**: Interactive age distributions of medalists, height-vs-weight scatter plots by sport/gender, and historical participation metrics.
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack &amp; Architecture
 
-* **Frontend & Web Framework:** [Streamlit](https://streamlit.io/)
-* **Data Manipulation:** [Pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/)
-* **Interactive Visualizations:** [Plotly](https://plotly.com/python/),[Seaborn]
+* **Language**: Python 3.10+
+* **Web Framework**: Streamlit
+* **Data Engineering &amp; Manipulation**: Pandas, NumPy
+* **Data Visualization**: Plotly, Seaborn, Matplotlib
+* **Deployment**: Streamlit Community Cloud
+
+---
+
+## ⚙️ Data Pipeline &amp; Technical Highlights
+
+* **Data Cleaning &amp; Integration**: Merged primary athlete records (`athlete_events.csv`) with National Olympic Committee region mapping (`noc_regions.csv`) to resolve historical country boundary changes.
+* **Filtering &amp; Scope**: Filtered analyses to Summer Olympic Games to ensure metric consistency across multi-decade trendlines.
+* **Performance Optimization**: Implemented Streamlit caching (`@st.cache_data`) on data loading and preprocessing routines to enable sub-second filter updates.
 
 ---
 
 ## 📂 Project Structure
 
 ```text
-├── app.py                  # Main Streamlit application & UI routing
-├── preprocessor.py         # Data cleaning and Summer Olympics filtering
-├── helper.py               # Analytical functions for tallies, trends, and distributions
-├── athlete_events.csv      # Dataset containing athlete-level Olympic records
-├── noc_regions.csv         # Dataset mapping NOC codes to country/region names
+├── code.py                  # Main Streamlit application &amp; UI layout
+├── preprocessor.py         # Data cleaning, NOC joining &amp; Summer Olympics filter
+├── helper.py               # Analytical queries, aggregation logic &amp; chart builders
+├── athlete_events.zip      # Historical dataset of Olympic athlete records (1896-2016)
+├── noc_regions.csv         # NOC region lookup table
+├── olympic_games_analysis.ipynb # Initial Exploratory Data Analysis (EDA) notebook
 ├── requirements.txt        # Python dependencies
 └── README.md               # Project documentation
-🚀 Getting Started
-1. Clone the repository
-Bash
-git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-cd your-repo-name
-2. Install dependencies
-Make sure you have Python installed, then install the required packages:
 
-Bash
-pip install streamlit pandas numpy plotly
-3. Run the Streamlit app
-Bash
-streamlit run app.py
-The app will automatically open in your default browser at http://localhost:8501.
+```
 
-📊 Dataset
-This project uses the 120 Years of Olympic History: Athletes and Results dataset (athlete_events.csv and noc_regions.csv), covering every Olympic Games from Athens 1896 to Rio 2016.
+---
 
-🤝 Contributing
-Contributions, issues, and feature requests are welcome! Feel free to fork this repository and submit a pull request.
+## 🚀 Local Setup &amp; Installation
+
+1. **Clone the repository**:
+
+```bash
+git clone https://github.com/kishoricharpe9-ai/olympics_datanalysis.git
+cd olympics_datanalysis
+
+```
+
+1. **Install dependencies**:
+
+```
+pip install -r requirements.txt
+
+```
+
+1. **Run the Streamlit app locally**:
+
+```
+streamlit run code.py
+
+```
+
+The app will automatically open in your browser at `http://localhost:8501`.
+
+---
+
+## 📊 Dataset Attribution
+
+This project utilizes the **120 Years of Olympic History: Athletes and Results** dataset, covering modern Olympic Games from Athens 1896 to Rio 2016.
