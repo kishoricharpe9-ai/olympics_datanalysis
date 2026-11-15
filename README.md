@@ -3,7 +3,7 @@
 
 An interactive Exploratory Data Analysis (EDA) dashboard built with **Python, Streamlit, and Plotly**. This application explores 120 years of modern Olympic Games history (1896–2016), enabling users to analyze medal tallies, historical participation trends, country-level performance, and athlete demographics.
 
-🚀 **Live Interactive App**: [Launch Streamlit Dashboard](https://olympicsdatanalysis-hduhxmsnw8mrdukvfrrwse.streamlit.app/)  
+🚀 **Live Interactive App**: [Launch Streamlit Dashboard](https:olympicsdatanalysis-hduhxmsnw8mrdukvfrrwse.streamlit.app)
 💻 **GitHub Repository**: [kishoricharpe9-ai/olympics_datanalysis](https://github.com/kishoricharpe9-ai/olympics_datanalysis)
 
 ---
