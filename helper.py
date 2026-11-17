@@ -142,7 +142,7 @@ def heatmap_year_sport(df,country):
             "Event",
             "Medal",
         ])
-    new_df=temp_df[temp_df['region'] == 'USA']
+    new_df=temp_df[temp_df['region'] == country]
 
     return new_df
 
